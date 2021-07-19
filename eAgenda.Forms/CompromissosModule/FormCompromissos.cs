@@ -104,6 +104,7 @@ namespace eAgenda.Forms.CompromissosModule
                 dgvCompromissos.DataMember = "Compromissos";
             }
         }
+
         private void btEditar_Click(object sender, EventArgs e)
         {
             int indiceColuna = dgvCompromissos.SelectedCells[0].RowIndex;
@@ -113,7 +114,6 @@ namespace eAgenda.Forms.CompromissosModule
             FormEditarCompromisso formEditCompromisso = new FormEditarCompromisso(idSelecionado);
             formEditCompromisso.Show();
         }
-
 
         private void rbCompromissosFuturos_CheckedChanged(object sender, EventArgs e)
         {
@@ -174,8 +174,7 @@ namespace eAgenda.Forms.CompromissosModule
         private void rbDiário_CheckedChanged(object sender, EventArgs e)
         {
             Compromissos.Clear();
-
-            DateTime dataAux = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day + 1);
+            DateTime dataAux = DateTime.Now.AddDays(1);
             List<Compromisso> compromissos = new List<Compromisso>();
             compromissos = ctrlCompromisso.SelecionarCompromissosFuturos(DateTime.Now, dataAux);
             foreach (Compromisso compromisso in compromissos)
