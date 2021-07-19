@@ -43,7 +43,7 @@ namespace eAgenda.Forms.CompromissosModule
             string[] strHorarioInicial = tbHorarioInicial.Text.Split(':');
             TimeSpan horarioInicio = new TimeSpan(int.Parse(strHorarioInicial[0]), int.Parse(strHorarioInicial[1]), 0);
 
-            string[] strHorarioFinal = tbHorarioInicial.Text.Split(':');
+            string[] strHorarioFinal = tbHorarioFinal.Text.Split(':');
             TimeSpan horarioFinal = new TimeSpan(int.Parse(strHorarioFinal[0]), int.Parse(strHorarioFinal[1]), 0);
 
             Compromisso compromisso = new Compromisso(tbAssunto.Text, tbLocal.Text, tbLink.Text, dateTimeData.Value,
