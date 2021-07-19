@@ -19,14 +19,24 @@ namespace eAgenda.Forms.CompromissosModule
         ControladorCompromisso ctrlCompromisso = new ControladorCompromisso();
         ControladorContato ctrlContato = new ControladorContato();
         int idSelecionado;
+        String[] compromissoSelecionado;
 
-        public FormEditarCompromisso(int idSelecionado)
+        public FormEditarCompromisso(int idSelecionado, String[] compromissoSelecionado)
         {
             InitializeComponent();
             this.idSelecionado = idSelecionado;
+            this.compromissoSelecionado = compromissoSelecionado;
         }
+
         private void FormEditarCompromisso_Load(object sender, EventArgs e)
         {
+            tbAssunto.Text = compromissoSelecionado[0];
+            tbLocal.Text = compromissoSelecionado[1];
+            tbLink.Text = compromissoSelecionado[2];
+            tbHorarioInicial.Text = compromissoSelecionado[4];
+            tbHorarioFinal.Text = compromissoSelecionado[5];
+
+
             cbContato.Items.Clear();
 
             foreach (Contato contato in ctrlContato.SelecionarTodos())
@@ -37,8 +47,14 @@ namespace eAgenda.Forms.CompromissosModule
 
         private void btAdicionar_Click(object sender, EventArgs e)
         {
-            string[] strContato = cbContato.SelectedItem.ToString().Split(' ');
-            Contato contato = ctrlContato.SelecionarPorId(int.Parse(strContato[0]));
+            Contato contato = null;
+
+            if (cbContato.SelectedItem != null)
+            {
+                string[] strContato = cbContato.SelectedItem.ToString().Split(' ');
+                contato = ctrlContato.SelecionarPorId(int.Parse(strContato[0]));
+
+            }
 
             string[] strHorarioInicial = tbHorarioInicial.Text.Split(':');
             TimeSpan horarioInicio = new TimeSpan(int.Parse(strHorarioInicial[0]), int.Parse(strHorarioInicial[1]), 0);

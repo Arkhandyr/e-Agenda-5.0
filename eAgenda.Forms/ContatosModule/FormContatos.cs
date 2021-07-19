@@ -104,7 +104,14 @@ namespace eAgenda.Forms.ContatosModule
             DataGridViewRow linhaSelecionada = dgvContatos.Rows[indiceColuna];
             int idSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-            FormEditarContato formEditContato = new FormEditarContato(idSelecionado);
+            String[] contatoSelecionado = {
+                linhaSelecionada.Cells[1].Value.ToString(),
+                linhaSelecionada.Cells[2].Value.ToString(),
+                linhaSelecionada.Cells[3].Value.ToString(),
+                linhaSelecionada.Cells[4].Value.ToString(),
+                linhaSelecionada.Cells[5].Value.ToString()};
+
+            FormEditarContato formEditContato = new FormEditarContato(idSelecionado, contatoSelecionado);
             formEditContato.Show();
         }
 

@@ -52,7 +52,7 @@ namespace eAgenda.Forms.CompromissosModule
             // 
             // btAdicionar
             // 
-            this.btAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(111)))), ((int)(((byte)(13)))));
+            this.btAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(98)))), ((int)(((byte)(12)))));
             this.btAdicionar.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAdicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.btAdicionar.Location = new System.Drawing.Point(151, 408);
@@ -222,6 +222,7 @@ namespace eAgenda.Forms.CompromissosModule
             this.Controls.Add(this.gbInformações);
             this.Controls.Add(this.lbControleDeTarefas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormEditarCompromisso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditarCompromisso";

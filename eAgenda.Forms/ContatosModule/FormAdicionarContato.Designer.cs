@@ -29,9 +29,12 @@ namespace eAgenda.Forms.ContatosModule
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdicionarContato));
             this.gbInformações = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tbCargo = new System.Windows.Forms.TextBox();
             this.tbEmpresa = new System.Windows.Forms.TextBox();
             this.tbTelefone = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
@@ -40,8 +43,6 @@ namespace eAgenda.Forms.ContatosModule
             this.label1 = new System.Windows.Forms.Label();
             this.lbControleDeTarefas = new System.Windows.Forms.Label();
             this.btAdicionar = new System.Windows.Forms.Button();
-            this.tbCargo = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.gbInformações.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +66,15 @@ namespace eAgenda.Forms.ContatosModule
             this.gbInformações.TabStop = false;
             this.gbInformações.Text = "Informações";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(43, 182);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 22);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Cargo";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -82,6 +92,13 @@ namespace eAgenda.Forms.ContatosModule
             this.label2.Size = new System.Drawing.Size(55, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "E-Mail";
+            // 
+            // tbCargo
+            // 
+            this.tbCargo.Location = new System.Drawing.Point(104, 182);
+            this.tbCargo.Name = "tbCargo";
+            this.tbCargo.Size = new System.Drawing.Size(217, 26);
+            this.tbCargo.TabIndex = 1;
             // 
             // tbEmpresa
             // 
@@ -153,22 +170,6 @@ namespace eAgenda.Forms.ContatosModule
             this.btAdicionar.UseVisualStyleBackColor = false;
             this.btAdicionar.Click += new System.EventHandler(this.btAdicionar_Click);
             // 
-            // tbCargo
-            // 
-            this.tbCargo.Location = new System.Drawing.Point(104, 182);
-            this.tbCargo.Name = "tbCargo";
-            this.tbCargo.Size = new System.Drawing.Size(217, 26);
-            this.tbCargo.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(43, 182);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 22);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Cargo";
-            // 
             // FormAdicionarContato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,6 +179,7 @@ namespace eAgenda.Forms.ContatosModule
             this.Controls.Add(this.btAdicionar);
             this.Controls.Add(this.gbInformações);
             this.Controls.Add(this.lbControleDeTarefas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAdicionarContato";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAdicionarContato";

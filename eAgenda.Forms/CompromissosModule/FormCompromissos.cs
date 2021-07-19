@@ -16,7 +16,6 @@ namespace eAgenda.Forms.CompromissosModule
     public partial class FormCompromissos : Form
     {
         ControladorCompromisso ctrlCompromisso = new ControladorCompromisso();
-        ControladorContato ctrlContato = new ControladorContato();
 
         public FormCompromissos()
         {
@@ -38,8 +37,8 @@ namespace eAgenda.Forms.CompromissosModule
                 registro["Local"] = compromisso.Local;
                 registro["Link"] = compromisso.Link;
                 registro["Data"] = compromisso.Data.ToShortDateString();
-                registro["Horário Inicial"] = compromisso.HoraInicio;
-                registro["Horário Final"] = compromisso.HoraTermino;
+                registro["Horário Inicial"] = compromisso.HoraInicio.ToString("hh\\:mm");
+                registro["Horário Final"] = compromisso.HoraTermino.ToString("hh\\:mm");
                 registro["Contato"] = compromisso.Contato != null ? compromisso.Contato.Nome : "";
 
                 Compromissos.Rows.Add(registro);
@@ -50,7 +49,6 @@ namespace eAgenda.Forms.CompromissosModule
         private void FormCompromissos_Activated(object sender, EventArgs e)
         {
             Compromissos.Clear();
-
             List<Compromisso> compromissos = new List<Compromisso>();
             compromissos = ctrlCompromisso.SelecionarTodos();
             foreach (Compromisso compromisso in compromissos)
@@ -62,8 +60,8 @@ namespace eAgenda.Forms.CompromissosModule
                 registro["Local"] = compromisso.Local;
                 registro["Link"] = compromisso.Link;
                 registro["Data"] = compromisso.Data.ToShortDateString();
-                registro["Horário Inicial"] = compromisso.HoraInicio;
-                registro["Horário Final"] = compromisso.HoraTermino;
+                registro["Horário Inicial"] = compromisso.HoraInicio.ToString("hh\\:mm");
+                registro["Horário Final"] = compromisso.HoraTermino.ToString("hh\\:mm");
                 registro["Contato"] = compromisso.Contato != null ? compromisso.Contato.Nome : "";
                 Compromissos.Rows.Add(registro);
                 dgvCompromissos.DataMember = "Compromissos";
@@ -111,7 +109,15 @@ namespace eAgenda.Forms.CompromissosModule
             DataGridViewRow linhaSelecionada = dgvCompromissos.Rows[indiceColuna];
             int idSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-            FormEditarCompromisso formEditCompromisso = new FormEditarCompromisso(idSelecionado);
+            String[] compromissoSelecionado = {
+                linhaSelecionada.Cells[1].Value.ToString(),
+                linhaSelecionada.Cells[2].Value.ToString(),
+                linhaSelecionada.Cells[3].Value.ToString(),
+                linhaSelecionada.Cells[4].Value.ToString(),
+                linhaSelecionada.Cells[5].Value.ToString(),
+                linhaSelecionada.Cells[6].Value.ToString() };
+
+            FormEditarCompromisso formEditCompromisso = new FormEditarCompromisso(idSelecionado, compromissoSelecionado);
             formEditCompromisso.Show();
         }
 
@@ -136,8 +142,8 @@ namespace eAgenda.Forms.CompromissosModule
                 registro["Local"] = compromisso.Local;
                 registro["Link"] = compromisso.Link;
                 registro["Data"] = compromisso.Data.ToShortDateString();
-                registro["Horário Inicial"] = compromisso.HoraInicio;
-                registro["Horário Final"] = compromisso.HoraTermino;
+                registro["Horário Inicial"] = compromisso.HoraInicio.ToString("hh\\:mm");
+                registro["Horário Final"] = compromisso.HoraTermino.ToString("hh\\:mm");
                 registro["Contato"] = compromisso.Contato != null ? compromisso.Contato.Nome : "";
 
                 Compromissos.Rows.Add(registro);
@@ -162,8 +168,8 @@ namespace eAgenda.Forms.CompromissosModule
                 registro["Local"] = compromisso.Local;
                 registro["Link"] = compromisso.Link;
                 registro["Data"] = compromisso.Data.ToShortDateString();
-                registro["Horário Inicial"] = compromisso.HoraInicio;
-                registro["Horário Final"] = compromisso.HoraTermino;
+                registro["Horário Inicial"] = compromisso.HoraInicio.ToString("hh\\:mm");
+                registro["Horário Final"] = compromisso.HoraTermino.ToString("hh\\:mm");
                 registro["Contato"] = compromisso.Contato != null ? compromisso.Contato.Nome : "";
 
                 Compromissos.Rows.Add(registro);
@@ -186,8 +192,8 @@ namespace eAgenda.Forms.CompromissosModule
                 registro["Local"] = compromisso.Local;
                 registro["Link"] = compromisso.Link;
                 registro["Data"] = compromisso.Data.ToShortDateString();
-                registro["Horário Inicial"] = compromisso.HoraInicio;
-                registro["Horário Final"] = compromisso.HoraTermino;
+                registro["Horário Inicial"] = compromisso.HoraInicio.ToString("hh\\:mm");
+                registro["Horário Final"] = compromisso.HoraTermino.ToString("hh\\:mm");
                 registro["Contato"] = compromisso.Contato != null ? compromisso.Contato.Nome : "";
 
                 Compromissos.Rows.Add(registro);
@@ -211,8 +217,8 @@ namespace eAgenda.Forms.CompromissosModule
                 registro["Local"] = compromisso.Local;
                 registro["Link"] = compromisso.Link;
                 registro["Data"] = compromisso.Data.ToShortDateString();
-                registro["Horário Inicial"] = compromisso.HoraInicio;
-                registro["Horário Final"] = compromisso.HoraTermino;
+                registro["Horário Inicial"] = compromisso.HoraInicio.ToString("hh\\:mm");
+                registro["Horário Final"] = compromisso.HoraTermino.ToString("hh\\:mm");
                 registro["Contato"] = compromisso.Contato != null ? compromisso.Contato.Nome : "";
 
                 Compromissos.Rows.Add(registro);

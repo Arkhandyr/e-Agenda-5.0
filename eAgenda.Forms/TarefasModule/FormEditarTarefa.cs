@@ -16,11 +16,13 @@ namespace eAgenda.Forms
     {
         ControladorTarefa ctrlTarefa = new ControladorTarefa();
         int idSelecionado;
+        String[] tarefaSelecionada;
 
-        public FormEditarTarefa(int idSelecionado)
+        public FormEditarTarefa(int idSelecionado, String[] tarefaSelecionada)
         {
             InitializeComponent();
             this.idSelecionado = idSelecionado;
+            this.tarefaSelecionada = tarefaSelecionada;
         }
 
         private void btEditar_Click(object sender, EventArgs e)
@@ -32,6 +34,12 @@ namespace eAgenda.Forms
                 MessageBox.Show("Tarefa editada com sucesso!");
                 this.Close();
             }
+        }
+
+        private void FormEditarTarefa_Load(object sender, EventArgs e)
+        {
+            tbTitulo.Text = tarefaSelecionada[0];
+            tbPercentual.Text = tarefaSelecionada[2];
         }
     }
 }

@@ -180,9 +180,11 @@ namespace eAgenda.Forms.ContatosModule
             this.Controls.Add(this.gbInformações);
             this.Controls.Add(this.lbControleDeTarefas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormEditarContato";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditarContato";
+            this.Load += new System.EventHandler(this.FormEditarContato_Load);
             this.gbInformações.ResumeLayout(false);
             this.gbInformações.PerformLayout();
             this.ResumeLayout(false);

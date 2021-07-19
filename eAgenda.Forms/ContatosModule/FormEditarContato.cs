@@ -16,11 +16,13 @@ namespace eAgenda.Forms.ContatosModule
     {
         ControladorContato ctrlContato = new ControladorContato();
         int idSelecionado;
+        String[] contatoSelecionado;
 
-        public FormEditarContato(int idSelecionado)
+        public FormEditarContato(int idSelecionado, String[] contatoSelecionado)
         {
             InitializeComponent();
             this.idSelecionado = idSelecionado;
+            this.contatoSelecionado = contatoSelecionado;
         }
 
         private void btEditar_Click(object sender, EventArgs e)
@@ -31,6 +33,15 @@ namespace eAgenda.Forms.ContatosModule
                 MessageBox.Show("Contato editado com sucesso!");
                 this.Close();
             }
+        }
+
+        private void FormEditarContato_Load(object sender, EventArgs e)
+        {
+            tbNome.Text = contatoSelecionado[0];
+            tbEmail.Text = contatoSelecionado[1];
+            tbTelefone.Text = contatoSelecionado[2];
+            tbEmpresa.Text = contatoSelecionado[3];
+            tbCargo.Text = contatoSelecionado[4];
         }
     }
 }

@@ -74,7 +74,7 @@ namespace eAgenda.Forms
             // 
             // bt_compromissos
             // 
-            this.bt_compromissos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(111)))), ((int)(((byte)(13)))));
+            this.bt_compromissos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(98)))), ((int)(((byte)(12)))));
             this.bt_compromissos.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_compromissos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.bt_compromissos.Location = new System.Drawing.Point(12, 187);
@@ -96,6 +96,7 @@ namespace eAgenda.Forms
             this.Controls.Add(this.bt_tarefas);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "TelaInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "eAgenda";

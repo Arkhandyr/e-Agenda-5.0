@@ -39,20 +39,20 @@ namespace eAgenda.Forms.CompromissosModule
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tbHorarioFinal = new System.Windows.Forms.TextBox();
+            this.tbHorarioInicial = new System.Windows.Forms.TextBox();
             this.tbLink = new System.Windows.Forms.TextBox();
             this.tbLocal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbAssunto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbControleDeTarefas = new System.Windows.Forms.Label();
-            this.tbHorarioInicial = new System.Windows.Forms.TextBox();
-            this.tbHorarioFinal = new System.Windows.Forms.TextBox();
             this.gbInformações.SuspendLayout();
             this.SuspendLayout();
             // 
             // btAdicionar
             // 
-            this.btAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(111)))), ((int)(((byte)(13)))));
+            this.btAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(98)))), ((int)(((byte)(12)))));
             this.btAdicionar.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAdicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.btAdicionar.Location = new System.Drawing.Point(153, 409);
@@ -148,6 +148,20 @@ namespace eAgenda.Forms.CompromissosModule
             this.label2.TabIndex = 2;
             this.label2.Text = "Local";
             // 
+            // tbHorarioFinal
+            // 
+            this.tbHorarioFinal.Location = new System.Drawing.Point(149, 220);
+            this.tbHorarioFinal.Name = "tbHorarioFinal";
+            this.tbHorarioFinal.Size = new System.Drawing.Size(217, 26);
+            this.tbHorarioFinal.TabIndex = 1;
+            // 
+            // tbHorarioInicial
+            // 
+            this.tbHorarioInicial.Location = new System.Drawing.Point(149, 181);
+            this.tbHorarioInicial.Name = "tbHorarioInicial";
+            this.tbHorarioInicial.Size = new System.Drawing.Size(217, 26);
+            this.tbHorarioInicial.TabIndex = 1;
+            // 
             // tbLink
             // 
             this.tbLink.Location = new System.Drawing.Point(149, 110);
@@ -198,20 +212,6 @@ namespace eAgenda.Forms.CompromissosModule
             this.lbControleDeTarefas.Text = "Adicionar Compromisso";
             this.lbControleDeTarefas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // tbHorarioInicial
-            // 
-            this.tbHorarioInicial.Location = new System.Drawing.Point(149, 181);
-            this.tbHorarioInicial.Name = "tbHorarioInicial";
-            this.tbHorarioInicial.Size = new System.Drawing.Size(217, 26);
-            this.tbHorarioInicial.TabIndex = 1;
-            // 
-            // tbHorarioFinal
-            // 
-            this.tbHorarioFinal.Location = new System.Drawing.Point(149, 220);
-            this.tbHorarioFinal.Name = "tbHorarioFinal";
-            this.tbHorarioFinal.Size = new System.Drawing.Size(217, 26);
-            this.tbHorarioFinal.TabIndex = 1;
-            // 
             // FormAdicionarCompromisso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,6 +222,7 @@ namespace eAgenda.Forms.CompromissosModule
             this.Controls.Add(this.gbInformações);
             this.Controls.Add(this.lbControleDeTarefas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormAdicionarCompromisso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAdicionarCompromisso";

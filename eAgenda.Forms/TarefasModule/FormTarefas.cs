@@ -126,7 +126,12 @@ namespace eAgenda.Forms
             DataGridViewRow linhaSelecionada = dgvTarefas.Rows[indiceColuna];
             int idSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-            FormEditarTarefa formEditTarefa = new FormEditarTarefa(idSelecionado);
+            String[] tarefaSelecionada = {
+                linhaSelecionada.Cells[1].Value.ToString(),
+                linhaSelecionada.Cells[2].Value.ToString(),
+                linhaSelecionada.Cells[3].Value.ToString()};
+
+            FormEditarTarefa formEditTarefa = new FormEditarTarefa(idSelecionado, tarefaSelecionada);
             formEditTarefa.Show();
         }
 

@@ -35,6 +35,12 @@ namespace eAgenda.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTarefas));
             this.lbControleDeTarefas = new System.Windows.Forms.Label();
             this.dgvTarefas = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.títuloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prioridadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.percentualDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inícioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conclusãoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dsTarefas = new System.Data.DataSet();
             this.Tarefas = new System.Data.DataTable();
             this.dataColumn1 = new System.Data.DataColumn();
@@ -50,12 +56,6 @@ namespace eAgenda.Forms
             this.btEditar = new System.Windows.Forms.Button();
             this.gbOpcoes = new System.Windows.Forms.GroupBox();
             this.gbVisualizacao = new System.Windows.Forms.GroupBox();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.títuloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prioridadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.percentualDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inícioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conclusãoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarefas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsTarefas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tarefas)).BeginInit();
@@ -125,6 +125,53 @@ namespace eAgenda.Forms
             this.dgvTarefas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTarefas.Size = new System.Drawing.Size(751, 277);
             this.dgvTarefas.TabIndex = 2;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // títuloDataGridViewTextBoxColumn
+            // 
+            this.títuloDataGridViewTextBoxColumn.DataPropertyName = "Título";
+            this.títuloDataGridViewTextBoxColumn.HeaderText = "Título";
+            this.títuloDataGridViewTextBoxColumn.Name = "títuloDataGridViewTextBoxColumn";
+            this.títuloDataGridViewTextBoxColumn.ReadOnly = true;
+            this.títuloDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // prioridadeDataGridViewTextBoxColumn
+            // 
+            this.prioridadeDataGridViewTextBoxColumn.DataPropertyName = "Prioridade";
+            this.prioridadeDataGridViewTextBoxColumn.HeaderText = "Prioridade";
+            this.prioridadeDataGridViewTextBoxColumn.Name = "prioridadeDataGridViewTextBoxColumn";
+            this.prioridadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.prioridadeDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // percentualDataGridViewTextBoxColumn
+            // 
+            this.percentualDataGridViewTextBoxColumn.DataPropertyName = "Percentual";
+            this.percentualDataGridViewTextBoxColumn.HeaderText = "Percentual";
+            this.percentualDataGridViewTextBoxColumn.Name = "percentualDataGridViewTextBoxColumn";
+            this.percentualDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // inícioDataGridViewTextBoxColumn
+            // 
+            this.inícioDataGridViewTextBoxColumn.DataPropertyName = "Início";
+            this.inícioDataGridViewTextBoxColumn.HeaderText = "Início";
+            this.inícioDataGridViewTextBoxColumn.Name = "inícioDataGridViewTextBoxColumn";
+            this.inícioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.inícioDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // conclusãoDataGridViewTextBoxColumn
+            // 
+            this.conclusãoDataGridViewTextBoxColumn.DataPropertyName = "Conclusão";
+            this.conclusãoDataGridViewTextBoxColumn.HeaderText = "Conclusão";
+            this.conclusãoDataGridViewTextBoxColumn.Name = "conclusãoDataGridViewTextBoxColumn";
+            this.conclusãoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.conclusãoDataGridViewTextBoxColumn.Width = 150;
             // 
             // dsTarefas
             // 
@@ -257,53 +304,6 @@ namespace eAgenda.Forms
             this.gbVisualizacao.TabStop = false;
             this.gbVisualizacao.Text = "Visualização";
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // títuloDataGridViewTextBoxColumn
-            // 
-            this.títuloDataGridViewTextBoxColumn.DataPropertyName = "Título";
-            this.títuloDataGridViewTextBoxColumn.HeaderText = "Título";
-            this.títuloDataGridViewTextBoxColumn.Name = "títuloDataGridViewTextBoxColumn";
-            this.títuloDataGridViewTextBoxColumn.ReadOnly = true;
-            this.títuloDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // prioridadeDataGridViewTextBoxColumn
-            // 
-            this.prioridadeDataGridViewTextBoxColumn.DataPropertyName = "Prioridade";
-            this.prioridadeDataGridViewTextBoxColumn.HeaderText = "Prioridade";
-            this.prioridadeDataGridViewTextBoxColumn.Name = "prioridadeDataGridViewTextBoxColumn";
-            this.prioridadeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.prioridadeDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // percentualDataGridViewTextBoxColumn
-            // 
-            this.percentualDataGridViewTextBoxColumn.DataPropertyName = "Percentual";
-            this.percentualDataGridViewTextBoxColumn.HeaderText = "Percentual";
-            this.percentualDataGridViewTextBoxColumn.Name = "percentualDataGridViewTextBoxColumn";
-            this.percentualDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // inícioDataGridViewTextBoxColumn
-            // 
-            this.inícioDataGridViewTextBoxColumn.DataPropertyName = "Início";
-            this.inícioDataGridViewTextBoxColumn.HeaderText = "Início";
-            this.inícioDataGridViewTextBoxColumn.Name = "inícioDataGridViewTextBoxColumn";
-            this.inícioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.inícioDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // conclusãoDataGridViewTextBoxColumn
-            // 
-            this.conclusãoDataGridViewTextBoxColumn.DataPropertyName = "Conclusão";
-            this.conclusãoDataGridViewTextBoxColumn.HeaderText = "Conclusão";
-            this.conclusãoDataGridViewTextBoxColumn.Name = "conclusãoDataGridViewTextBoxColumn";
-            this.conclusãoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.conclusãoDataGridViewTextBoxColumn.Width = 150;
-            // 
             // FormTarefas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,6 +315,7 @@ namespace eAgenda.Forms
             this.Controls.Add(this.dgvTarefas);
             this.Controls.Add(this.lbControleDeTarefas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormTarefas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "eAgenda";

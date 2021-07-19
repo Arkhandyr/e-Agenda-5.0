@@ -280,6 +280,7 @@ namespace eAgenda.Forms.ContatosModule
             this.Controls.Add(this.lbControleDeTarefas);
             this.Controls.Add(this.gbOpcoes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormContatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormContatos";

@@ -41,6 +41,14 @@ namespace eAgenda.Forms.CompromissosModule
             this.btEditar = new System.Windows.Forms.Button();
             this.btRemover = new System.Windows.Forms.Button();
             this.dgvCompromissos = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assuntoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.localDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.linkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horárioInicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horárioFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dsCompromissos = new System.Data.DataSet();
             this.Compromissos = new System.Data.DataTable();
             this.dataColumn1 = new System.Data.DataColumn();
@@ -55,14 +63,6 @@ namespace eAgenda.Forms.CompromissosModule
             this.gbOrdenacao = new System.Windows.Forms.GroupBox();
             this.rbDiário = new System.Windows.Forms.RadioButton();
             this.rbMensal = new System.Windows.Forms.RadioButton();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assuntoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.localDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.linkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horárioInicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horárioFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbVisualizacao.SuspendLayout();
             this.gbOpcoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompromissos)).BeginInit();
@@ -125,7 +125,7 @@ namespace eAgenda.Forms.CompromissosModule
             // 
             // btAdicionar
             // 
-            this.btAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(111)))), ((int)(((byte)(13)))));
+            this.btAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(98)))), ((int)(((byte)(12)))));
             this.btAdicionar.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btAdicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.btAdicionar.Location = new System.Drawing.Point(16, 23);
@@ -138,7 +138,7 @@ namespace eAgenda.Forms.CompromissosModule
             // 
             // btEditar
             // 
-            this.btEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(111)))), ((int)(((byte)(13)))));
+            this.btEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(98)))), ((int)(((byte)(12)))));
             this.btEditar.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.btEditar.Location = new System.Drawing.Point(292, 23);
@@ -151,7 +151,7 @@ namespace eAgenda.Forms.CompromissosModule
             // 
             // btRemover
             // 
-            this.btRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(111)))), ((int)(((byte)(13)))));
+            this.btRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(98)))), ((int)(((byte)(12)))));
             this.btRemover.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btRemover.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.btRemover.Location = new System.Drawing.Point(154, 23);
@@ -169,14 +169,14 @@ namespace eAgenda.Forms.CompromissosModule
             this.dgvCompromissos.AllowUserToResizeColumns = false;
             this.dgvCompromissos.AllowUserToResizeRows = false;
             this.dgvCompromissos.AutoGenerateColumns = false;
-            this.dgvCompromissos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(111)))), ((int)(((byte)(13)))));
+            this.dgvCompromissos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(98)))), ((int)(((byte)(12)))));
             this.dgvCompromissos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCompromissos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(111)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(98)))), ((int)(((byte)(12)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(111)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(98)))), ((int)(((byte)(12)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCompromissos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -193,11 +193,11 @@ namespace eAgenda.Forms.CompromissosModule
             this.dgvCompromissos.DataMember = "Compromissos";
             this.dgvCompromissos.DataSource = this.dsCompromissos;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(111)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(98)))), ((int)(((byte)(12)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(111)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(98)))), ((int)(((byte)(12)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCompromissos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCompromissos.EnableHeadersVisualStyles = false;
@@ -209,12 +209,75 @@ namespace eAgenda.Forms.CompromissosModule
             this.dgvCompromissos.ReadOnly = true;
             this.dgvCompromissos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvCompromissos.RowHeadersVisible = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(111)))), ((int)(((byte)(13)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(98)))), ((int)(((byte)(12)))));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(241)))), ((int)(((byte)(228)))));
             this.dgvCompromissos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCompromissos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCompromissos.Size = new System.Drawing.Size(1051, 364);
             this.dgvCompromissos.TabIndex = 15;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // assuntoDataGridViewTextBoxColumn
+            // 
+            this.assuntoDataGridViewTextBoxColumn.DataPropertyName = "Assunto";
+            this.assuntoDataGridViewTextBoxColumn.HeaderText = "Assunto";
+            this.assuntoDataGridViewTextBoxColumn.Name = "assuntoDataGridViewTextBoxColumn";
+            this.assuntoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.assuntoDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // localDataGridViewTextBoxColumn
+            // 
+            this.localDataGridViewTextBoxColumn.DataPropertyName = "Local";
+            this.localDataGridViewTextBoxColumn.HeaderText = "Local";
+            this.localDataGridViewTextBoxColumn.Name = "localDataGridViewTextBoxColumn";
+            this.localDataGridViewTextBoxColumn.ReadOnly = true;
+            this.localDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // linkDataGridViewTextBoxColumn
+            // 
+            this.linkDataGridViewTextBoxColumn.DataPropertyName = "Link";
+            this.linkDataGridViewTextBoxColumn.HeaderText = "Link";
+            this.linkDataGridViewTextBoxColumn.Name = "linkDataGridViewTextBoxColumn";
+            this.linkDataGridViewTextBoxColumn.ReadOnly = true;
+            this.linkDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // dataDataGridViewTextBoxColumn
+            // 
+            this.dataDataGridViewTextBoxColumn.DataPropertyName = "Data";
+            this.dataDataGridViewTextBoxColumn.HeaderText = "Data";
+            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
+            this.dataDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // horárioInicialDataGridViewTextBoxColumn
+            // 
+            this.horárioInicialDataGridViewTextBoxColumn.DataPropertyName = "Horário Inicial";
+            this.horárioInicialDataGridViewTextBoxColumn.HeaderText = "Horário Inicial";
+            this.horárioInicialDataGridViewTextBoxColumn.Name = "horárioInicialDataGridViewTextBoxColumn";
+            this.horárioInicialDataGridViewTextBoxColumn.ReadOnly = true;
+            this.horárioInicialDataGridViewTextBoxColumn.Width = 145;
+            // 
+            // horárioFinalDataGridViewTextBoxColumn
+            // 
+            this.horárioFinalDataGridViewTextBoxColumn.DataPropertyName = "Horário Final";
+            this.horárioFinalDataGridViewTextBoxColumn.HeaderText = "Horário Final";
+            this.horárioFinalDataGridViewTextBoxColumn.Name = "horárioFinalDataGridViewTextBoxColumn";
+            this.horárioFinalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.horárioFinalDataGridViewTextBoxColumn.Width = 145;
+            // 
+            // contatoDataGridViewTextBoxColumn
+            // 
+            this.contatoDataGridViewTextBoxColumn.DataPropertyName = "Contato";
+            this.contatoDataGridViewTextBoxColumn.HeaderText = "Contato";
+            this.contatoDataGridViewTextBoxColumn.Name = "contatoDataGridViewTextBoxColumn";
+            this.contatoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.contatoDataGridViewTextBoxColumn.Width = 140;
             // 
             // dsCompromissos
             // 
@@ -321,69 +384,6 @@ namespace eAgenda.Forms.CompromissosModule
             this.rbMensal.UseVisualStyleBackColor = true;
             this.rbMensal.CheckedChanged += new System.EventHandler(this.rbMensal_CheckedChanged);
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // assuntoDataGridViewTextBoxColumn
-            // 
-            this.assuntoDataGridViewTextBoxColumn.DataPropertyName = "Assunto";
-            this.assuntoDataGridViewTextBoxColumn.HeaderText = "Assunto";
-            this.assuntoDataGridViewTextBoxColumn.Name = "assuntoDataGridViewTextBoxColumn";
-            this.assuntoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.assuntoDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // localDataGridViewTextBoxColumn
-            // 
-            this.localDataGridViewTextBoxColumn.DataPropertyName = "Local";
-            this.localDataGridViewTextBoxColumn.HeaderText = "Local";
-            this.localDataGridViewTextBoxColumn.Name = "localDataGridViewTextBoxColumn";
-            this.localDataGridViewTextBoxColumn.ReadOnly = true;
-            this.localDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // linkDataGridViewTextBoxColumn
-            // 
-            this.linkDataGridViewTextBoxColumn.DataPropertyName = "Link";
-            this.linkDataGridViewTextBoxColumn.HeaderText = "Link";
-            this.linkDataGridViewTextBoxColumn.Name = "linkDataGridViewTextBoxColumn";
-            this.linkDataGridViewTextBoxColumn.ReadOnly = true;
-            this.linkDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // dataDataGridViewTextBoxColumn
-            // 
-            this.dataDataGridViewTextBoxColumn.DataPropertyName = "Data";
-            this.dataDataGridViewTextBoxColumn.HeaderText = "Data";
-            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
-            this.dataDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // horárioInicialDataGridViewTextBoxColumn
-            // 
-            this.horárioInicialDataGridViewTextBoxColumn.DataPropertyName = "Horário Inicial";
-            this.horárioInicialDataGridViewTextBoxColumn.HeaderText = "Horário Inicial";
-            this.horárioInicialDataGridViewTextBoxColumn.Name = "horárioInicialDataGridViewTextBoxColumn";
-            this.horárioInicialDataGridViewTextBoxColumn.ReadOnly = true;
-            this.horárioInicialDataGridViewTextBoxColumn.Width = 145;
-            // 
-            // horárioFinalDataGridViewTextBoxColumn
-            // 
-            this.horárioFinalDataGridViewTextBoxColumn.DataPropertyName = "Horário Final";
-            this.horárioFinalDataGridViewTextBoxColumn.HeaderText = "Horário Final";
-            this.horárioFinalDataGridViewTextBoxColumn.Name = "horárioFinalDataGridViewTextBoxColumn";
-            this.horárioFinalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.horárioFinalDataGridViewTextBoxColumn.Width = 145;
-            // 
-            // contatoDataGridViewTextBoxColumn
-            // 
-            this.contatoDataGridViewTextBoxColumn.DataPropertyName = "Contato";
-            this.contatoDataGridViewTextBoxColumn.HeaderText = "Contato";
-            this.contatoDataGridViewTextBoxColumn.Name = "contatoDataGridViewTextBoxColumn";
-            this.contatoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.contatoDataGridViewTextBoxColumn.Width = 140;
-            // 
             // FormCompromissos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,6 +396,7 @@ namespace eAgenda.Forms.CompromissosModule
             this.Controls.Add(this.dgvCompromissos);
             this.Controls.Add(this.lbControleDeTarefas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormCompromissos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCompromissos";
