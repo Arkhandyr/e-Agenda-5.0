@@ -399,7 +399,7 @@ namespace eAgenda.Forms.CompromissosModule
             this.MaximizeBox = false;
             this.Name = "FormCompromissos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormCompromissos";
+            this.Text = "eAgenda";
             this.Activated += new System.EventHandler(this.FormCompromissos_Activated);
             this.Load += new System.EventHandler(this.FormCompromissos_Load);
             this.gbVisualizacao.ResumeLayout(false);

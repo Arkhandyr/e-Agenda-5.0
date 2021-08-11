@@ -225,7 +225,7 @@ namespace eAgenda.Forms.CompromissosModule
             this.MaximizeBox = false;
             this.Name = "FormEditarCompromisso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormEditarCompromisso";
+            this.Text = "eAgenda";
             this.Load += new System.EventHandler(this.FormEditarCompromisso_Load);
             this.gbInformações.ResumeLayout(false);
             this.gbInformações.PerformLayout();

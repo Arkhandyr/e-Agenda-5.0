@@ -283,7 +283,7 @@ namespace eAgenda.Forms.ContatosModule
             this.MaximizeBox = false;
             this.Name = "FormContatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormContatos";
+            this.Text = "eAgenda";
             this.Activated += new System.EventHandler(this.FormContatos_Activated);
             this.Load += new System.EventHandler(this.FormContatos_Load);
             this.gbOpcoes.ResumeLayout(false);
