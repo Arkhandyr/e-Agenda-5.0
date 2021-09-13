@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eAgenda.Dominio", "e-Agenda.Dominio\eAgenda.Dominio.csproj", "{D961C68A-EBEB-40AC-B35D-469267EE4514}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3A72012A-312E-4137-A68B-097766890510}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\MANUAL DO USUÁRIO - eAgenda.pdf = ..\..\..\Downloads\MANUAL DO USUÁRIO - eAgenda.pdf
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eAgenda.ConsoleApp", "eAgenda.ConsoleApp\eAgenda.ConsoleApp.csproj", "{26CB4DC7-6B8C-46F4-8887-0F1DBAD308DB}"
 EndProject

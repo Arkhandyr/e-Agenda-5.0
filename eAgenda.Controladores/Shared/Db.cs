@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Configuration;
-using System.Data.SQLite;
 using System.Data.Common;
 
 namespace eAgenda.Controladores.Shared
 {
     public delegate T ConverterDelegate<T>(IDataReader reader);
 
+    /// <summary>
+    /// Banco de dados.
+    /// </summary>
     public static class Db
     {
         private static readonly string bancoDeDados;

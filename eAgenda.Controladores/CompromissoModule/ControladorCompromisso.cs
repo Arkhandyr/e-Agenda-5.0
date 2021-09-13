@@ -7,9 +7,15 @@ using System.Data;
 
 namespace eAgenda.Controladores.CompromissoModule
 {
+    /// <summary>
+    /// Controlador de compromissos.
+    /// </summary>
     public class ControladorCompromisso : Controlador<Compromisso>
     {
         #region Queries
+        /// <summary>
+        /// Query para inserir compromisso.
+        /// </summary>
         private const string sqlInserirCompromisso =
             @"INSERT INTO [TBCOMPROMISSO]
                 (
@@ -32,6 +38,9 @@ namespace eAgenda.Controladores.CompromissoModule
                     @LINK
                 )";
 
+        /// <summary>
+        /// Query para editar compromisso.
+        /// </summary>
         private const string sqlEditarCompromisso =
             @" UPDATE [TBCOMPROMISSO]
                 SET 
@@ -45,10 +54,16 @@ namespace eAgenda.Controladores.CompromissoModule
 
                 WHERE [ID] = @ID";
 
+        /// <summary>
+        /// Query para excluir compromisso.
+        /// </summary>
         private const string sqlExcluirCompromisso =
             @"DELETE FROM [TBCOMPROMISSO] 
                 WHERE [ID] = @ID";
 
+        /// <summary>
+        /// Query para selecionar todos os compromissos.
+        /// </summary>
         private const string sqlSelecionarTodosCompromissos =
             @"SELECT 
                 CP.[ID],       
@@ -70,6 +85,9 @@ namespace eAgenda.Controladores.CompromissoModule
             ON
                 CT.ID = CP.ID_CONTATO";
 
+        /// <summary>
+        /// Query para selecionar um compromisso pelo seu ID.
+        /// </summary>
         private const string sqlSelecionarCompromissoPorId =
             @"SELECT 
                 CP.[ID],       
@@ -93,6 +111,9 @@ namespace eAgenda.Controladores.CompromissoModule
             WHERE 
                 CP.[ID] = @ID";
 
+        /// <summary>
+        /// Query para selecionar todos os compromissos passados.
+        /// </summary>
         private const string sqlSelecionarTodosCompromissosPassados =
             @"SELECT 
                 CP.[ID],       
@@ -116,6 +137,9 @@ namespace eAgenda.Controladores.CompromissoModule
             WHERE 
                 CP.[DATA] <= @DATA";
 
+        /// <summary>
+        /// Query para selecionar todos os compromissos futuros.
+        /// </summary>
         private const string sqlSelecionarTodosCompromissosFuturos =
             @"SELECT 
                 CP.[ID],       
@@ -139,6 +163,9 @@ namespace eAgenda.Controladores.CompromissoModule
             WHERE 
                 CP.[DATA] BETWEEN @DATAINICIO AND @DATAFIM";
 
+        /// <summary>
+        /// Query para procurar um compromisso.
+        /// </summary>
         private const string sqlExisteCompromisso =
             @"SELECT 
                 COUNT(*) 
@@ -147,6 +174,9 @@ namespace eAgenda.Controladores.CompromissoModule
             WHERE 
                 [ID] = @ID";
 
+        /// <summary>
+        /// Query para verificar se um horário já está ocupado.
+        /// </summary>
         private const string sqlVerificarHorarioOcupado =
             @"SELECT
 	            COUNT(*)
@@ -161,6 +191,11 @@ namespace eAgenda.Controladores.CompromissoModule
 
         #endregion
 
+        /// <summary>
+        /// Insere um novo compromisso.
+        /// </summary>
+        /// <param name="registro">O registro.</param>
+        /// <returns>Uma string.</returns>
         public override string InserirNovo(Compromisso registro)
         {
             string resultadoValidacao = registro.Validar();
@@ -178,6 +213,12 @@ namespace eAgenda.Controladores.CompromissoModule
             return resultadoValidacao;
         }
 
+        /// <summary>
+        /// Edita um compromisso.
+        /// </summary>
+        /// <param name="id">O ID.</param>
+        /// <param name="registro">O registro.</param>
+        /// <returns>Uma string.</returns>
         public override string Editar(int id, Compromisso registro)
         {
             string resultadoValidacao = registro.Validar();
@@ -191,6 +232,11 @@ namespace eAgenda.Controladores.CompromissoModule
             return resultadoValidacao;
         }
 
+        /// <summary>
+        /// Exclui um compromisso.
+        /// </summary>
+        /// <param name="id">O ID.</param>
+        /// <returns>Um booleano</returns>
         public override bool Excluir(int id)
         {
             try
@@ -205,21 +251,41 @@ namespace eAgenda.Controladores.CompromissoModule
             return true;
         }
 
+        /// <summary>
+        /// Verifica se um compromisso existe.
+        /// </summary>
+        /// <param name="id">O ID.</param>
+        /// <returns>Um booleano.</returns>
         public override bool Existe(int id)
         {
             return Db.Exists(sqlExisteCompromisso, AdicionarParametro("ID", id));
         }
 
+        /// <summary>
+        /// Seleciona um compromisso pelo seu ID.
+        /// </summary>
+        /// <param name="id">O ID.</param>
+        /// <returns>Um Compromisso.</returns>
         public override Compromisso SelecionarPorId(int id)
         {
             return Db.Get(sqlSelecionarCompromissoPorId, ConverterEmCompromisso, AdicionarParametro("ID", id));
         }
 
+        /// <summary>
+        /// Seleciona todos os compromissos.
+        /// </summary>
+        /// <returns>Uma lista de Compromissos.</returns>
         public override List<Compromisso> SelecionarTodos()
         {
             return Db.GetAll(sqlSelecionarTodosCompromissos, ConverterEmCompromisso);
         }
 
+        /// <summary>
+        /// Seleciona os compromissos futuros.
+        /// </summary>
+        /// <param name="dataInicio">A data de inicio.</param>
+        /// <param name="dataFim">A data final.</param>
+        /// <returns>Uma lista de Compromissos.</returns>
         public List<Compromisso> SelecionarCompromissosFuturos(DateTime dataInicio, DateTime dataFim)
         {
             var parametros = new Dictionary<string, object>();
@@ -230,14 +296,24 @@ namespace eAgenda.Controladores.CompromissoModule
             return Db.GetAll(sqlSelecionarTodosCompromissosFuturos, ConverterEmCompromisso, parametros);
         }
 
+        /// <summary>
+        /// Seleciona os compromissos passados.
+        /// </summary>
+        /// <param name="data">A data.</param>
+        /// <returns>Uma lista de Compromissos.</returns>
         public List<Compromisso> SelecionarCompromissosPassados(DateTime data)
         {
             return Db.GetAll(sqlSelecionarTodosCompromissosPassados, ConverterEmCompromisso, AdicionarParametro("DATA", data));
         }
 
         /// <summary>
-        /// //https://stackoverflow.com/questions/8503825/what-is-the-correct-sql-type-to-store-a-net-timespan-with-values-240000
+        /// Verifica se o horário está ocupado.
+        /// https://stackoverflow.com/questions/8503825/what-is-the-correct-sql-type-to-store-a-net-timespan-with-values-240000
         /// </summary>
+        /// <param name="data">A data.</param>
+        /// <param name="horaInicioDesejado">A hora de inicio desejado.</param>
+        /// <param name="horaTerminoDesejado">A hora de termino desejado.</param>
+        /// <returns>Um booleano.</returns>
         public bool VerificarHorarioOcupado(DateTime data, TimeSpan horaInicioDesejado, TimeSpan horaTerminoDesejado)
         {
             var parametros = new Dictionary<string, object>();
@@ -250,6 +326,11 @@ namespace eAgenda.Controladores.CompromissoModule
             return Db.Exists(sqlVerificarHorarioOcupado, parametros);
         }
 
+        /// <summary>
+        /// Converte o resultado da query em um compromisso.
+        /// </summary>
+        /// <param name="reader">O DataReader.</param>
+        /// <returns>Um Compromisso.</returns>
         private Compromisso ConverterEmCompromisso(IDataReader reader)
         {
             var assunto = Convert.ToString(reader["ASSUNTO"]);
@@ -278,6 +359,11 @@ namespace eAgenda.Controladores.CompromissoModule
             return compromisso;
         }
 
+        /// <summary>
+        /// Obtem os parametros do compromisso.
+        /// </summary>
+        /// <param name="compromisso">O compromisso.</param>
+        /// <returns>Um dicionário.</returns>
         private Dictionary<string, object> ObtemParametrosCompromisso(Compromisso compromisso)
         {
             var parametros = new Dictionary<string, object>();

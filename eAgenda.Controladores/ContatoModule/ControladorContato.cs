@@ -6,8 +6,14 @@ using System.Data;
 
 namespace eAgenda.Controladores.ContatoModule
 {
+    /// <summary>
+    /// Controlador de contatos.
+    /// </summary>
     public class ControladorContato : Controlador<Contato>
     {
+        /// <summary>
+        /// Query para inserir contato.
+        /// </summary>
         private const string sqlInserirContato =
             @"INSERT INTO TBCONTATO 
 	                (
@@ -26,6 +32,9 @@ namespace eAgenda.Controladores.ContatoModule
 		                @EMPRESA
 	                )";
 
+        /// <summary>
+        /// Query para editar contato.
+        /// </summary>
         private const string sqlEditarContato =
             @"UPDATE TBCONTATO
                     SET
@@ -37,6 +46,9 @@ namespace eAgenda.Controladores.ContatoModule
                     WHERE 
                         ID = @ID";
 
+        /// <summary>
+        /// Query para excluir contato.
+        /// </summary>
         private const string sqlExcluirContato =
             @"DELETE 
 	                FROM
@@ -44,6 +56,9 @@ namespace eAgenda.Controladores.ContatoModule
                     WHERE 
                         ID = @ID";
 
+        /// <summary>
+        /// Query para excluir contato.
+        /// </summary>
         private const string sqlSelecionarContatoPorId =
             @"SELECT
                         [ID],
@@ -57,6 +72,9 @@ namespace eAgenda.Controladores.ContatoModule
                     WHERE 
                         ID = @ID";
 
+        /// <summary>
+        /// Query para selecionar todos os contatos.
+        /// </summary>
         private const string sqlSelecionarTodosContatos =
             @"SELECT
                         [ID],
@@ -68,6 +86,9 @@ namespace eAgenda.Controladores.ContatoModule
 	                FROM
                         TBCONTATO ORDER BY CARGO;";
 
+        /// <summary>
+        /// Query para verificar se existe um contato.
+        /// </summary>
         private const string sqlExisteContato =
             @"SELECT 
                 COUNT(*) 
@@ -76,6 +97,11 @@ namespace eAgenda.Controladores.ContatoModule
             WHERE 
                 [ID] = @ID";
 
+        /// <summary>
+        /// Insere um novo contato.
+        /// </summary>
+        /// <param name="registro">The registro.</param>
+        /// <returns>Uma string.</returns>
         public override string InserirNovo(Contato registro)
         {
             string resultadoValidacao = registro.Validar();
@@ -88,6 +114,12 @@ namespace eAgenda.Controladores.ContatoModule
             return resultadoValidacao;
         }
 
+        /// <summary>
+        /// Edita um contato.
+        /// </summary>
+        /// <param name="id">O id.</param>
+        /// <param name="registro">O registro.</param>
+        /// <returns>Uma string.</returns>
         public override string Editar(int id, Contato registro)
         {
             string resultadoValidacao = registro.Validar();
@@ -101,6 +133,11 @@ namespace eAgenda.Controladores.ContatoModule
             return resultadoValidacao;
         }
 
+        /// <summary>
+        /// Exclui um contato
+        /// </summary>
+        /// <param name="id">O id.</param>
+        /// <returns>Um booleano.</returns>
         public override bool Excluir(int id)
         {
             try
@@ -115,21 +152,40 @@ namespace eAgenda.Controladores.ContatoModule
             return true;
         }
 
+        /// <summary>
+        /// Verifica se existe um contato
+        /// </summary>
+        /// <param name="id">O id.</param>
+        /// <returns>Um booleano.</returns>
         public override bool Existe(int id)
         {
             return Db.Exists(sqlExisteContato, AdicionarParametro("ID", id));
         }
 
+        /// <summary>
+        /// Seleciona um contato pelo seu ID
+        /// </summary>
+        /// <param name="id">O id.</param>
+        /// <returns>Um Contato.</returns>
         public override Contato SelecionarPorId(int id)
         {
             return Db.Get(sqlSelecionarContatoPorId, ConverterEmContato, AdicionarParametro("ID", id));
         }
 
+        /// <summary>
+        /// Seleciona todos os contatos.
+        /// </summary>
+        /// <returns>Uma lista de Contatos.</returns>
         public override List<Contato> SelecionarTodos()
         {
             return Db.GetAll(sqlSelecionarTodosContatos, ConverterEmContato);
         }
 
+        /// <summary>
+        /// Seleciona os contatos agrupados.
+        /// </summary>
+        /// <param name="campo">O campo.</param>
+        /// <returns>Uma lista de GrupoContatos.</returns>
         public List<GrupoContato> SelecionarContatosAgrupados(Func<Contato, string> campo)
         {
             var contatos = Db.GetAll(sqlSelecionarTodosContatos, ConverterEmContato);
@@ -137,6 +193,11 @@ namespace eAgenda.Controladores.ContatoModule
             return new AgrupadorContato().Agrupar(contatos, campo);
         }
 
+        /// <summary>
+        /// Obtem os parametros de um contato.
+        /// </summary>
+        /// <param name="contato">The contato.</param>
+        /// <returns>A Dictionary.</returns>
         private Dictionary<string, object> ObtemParametrosContato(Contato contato)
         {
             var parametros = new Dictionary<string, object>();
@@ -151,6 +212,11 @@ namespace eAgenda.Controladores.ContatoModule
             return parametros;
         }
 
+        /// <summary>
+        /// Converte o resultado da query em um contato.
+        /// </summary>
+        /// <param name="reader">O DataReader.</param>
+        /// <returns>Um Contato.</returns>
         private Contato ConverterEmContato(IDataReader reader)
         {
             int id = Convert.ToInt32(reader["ID"]);
@@ -166,8 +232,5 @@ namespace eAgenda.Controladores.ContatoModule
 
             return contato;
         }
-
-
-
     }
 }
