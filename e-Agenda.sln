@@ -24,6 +24,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "eAgenda.Database.SqlServer"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eAgenda.Forms", "eAgenda.Forms\eAgenda.Forms.csproj", "{0A045F65-29FD-4FF2-BE29-1C23349D2F3B}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "eAgenda", "eAgenda\eAgenda.vdproj", "{429C0FA5-4B9A-4C84-9854-5A3CD29A7D5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,6 +94,10 @@ Global
 		{0A045F65-29FD-4FF2-BE29-1C23349D2F3B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0A045F65-29FD-4FF2-BE29-1C23349D2F3B}.Release|x64.ActiveCfg = Release|Any CPU
 		{0A045F65-29FD-4FF2-BE29-1C23349D2F3B}.Release|x64.Build.0 = Release|Any CPU
+		{429C0FA5-4B9A-4C84-9854-5A3CD29A7D5B}.Debug|Any CPU.ActiveCfg = Debug
+		{429C0FA5-4B9A-4C84-9854-5A3CD29A7D5B}.Debug|x64.ActiveCfg = Debug
+		{429C0FA5-4B9A-4C84-9854-5A3CD29A7D5B}.Release|Any CPU.ActiveCfg = Release
+		{429C0FA5-4B9A-4C84-9854-5A3CD29A7D5B}.Release|x64.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
